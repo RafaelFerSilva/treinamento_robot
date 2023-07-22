@@ -1,25 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.1 (Python 3.10.11 on win32)" generated="20230721 21:21:40.851" rpa="false" schemaversion="4">
+<robot generator="Robot 6.1 (Python 3.10.11 on win32)" generated="20230721 23:54:40.825" rpa="false" schemaversion="4">
 <suite id="s1" name="Tests" source="C:\Documentos\Projetos\orbia\treinamento_robot\tests">
-<suite id="s1-s1" name="Tests" source="C:\Documentos\Projetos\orbia\treinamento_robot\tests\tests.robot">
-<test id="s1-s1-t1" name="Deve ser possível acessar o site DEMOQA" line="7">
-<kw name="Abrir o navegador no site da DEMOQA" library="common_keywords">
+<suite id="s1-s1" name="Home" source="C:\Documentos\Projetos\orbia\treinamento_robot\tests\home.robot">
+<kw name="Abrir o navegador no site da DEMOQA" library="common_keywords" type="SETUP">
 <kw name="New Browser" library="Browser">
 <arg>browser=${BROWSER}</arg>
 <arg>headless=${HEADLESS}</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Create a new playwright Browser with specified options.</doc>
-<msg timestamp="20230721 21:21:42.192" level="INFO">{"browser": "chromium", "headless": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "C:\\Documentos\\Projetos\\orbia\\treinamento_robot\\reports\\browser\\traces\\0c4cff78-5fd1-47db-a6b9-12010ce44eae"}</msg>
-<msg timestamp="20230721 21:21:43.105" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"C:\\Documentos\\Projetos\\orbia\\treinamento_robot\\reports\\browser\\traces\\0c4cff78-5fd1-47db-a6b9-12010ce44eae"}</msg>
-<status status="PASS" starttime="20230721 21:21:42.191" endtime="20230721 21:21:43.106"/>
+<msg timestamp="20230721 23:54:42.188" level="INFO">{"browser": "chromium", "headless": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "C:\\Documentos\\Projetos\\orbia\\treinamento_robot\\reports\\browser\\traces\\e810de35-daef-4c7f-95ed-715f3173b7d8"}</msg>
+<msg timestamp="20230721 23:54:43.199" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"C:\\Documentos\\Projetos\\orbia\\treinamento_robot\\reports\\browser\\traces\\e810de35-daef-4c7f-95ed-715f3173b7d8"}</msg>
+<status status="PASS" starttime="20230721 23:54:42.187" endtime="20230721 23:54:43.199"/>
 </kw>
 <kw name="New Context" library="Browser">
 <arg>viewport=${VIEWPORT}</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Create a new BrowserContext with specified options.</doc>
-<msg timestamp="20230721 21:21:43.108" level="INFO">{
+<msg timestamp="20230721 23:54:43.202" level="INFO">{
   "acceptDownloads": true,
   "bypassCSP": false,
   "forcedColors": "none",
@@ -29,13 +28,13 @@
   "offline": false,
   "reducedMotion": "no-preference",
   "viewport": {
-    "height": 720,
-    "width": 1280
+    "width": 1280,
+    "height": 720
   }
 }</msg>
-<msg timestamp="20230721 21:21:43.133" level="INFO">Successfully created context. </msg>
-<msg timestamp="20230721 21:21:43.133" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'hideRfBrowser': '', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'viewport': {'height': 720, 'width': 1280}}</msg>
-<status status="PASS" starttime="20230721 21:21:43.106" endtime="20230721 21:21:43.133"/>
+<msg timestamp="20230721 23:54:43.232" level="INFO">Successfully created context. </msg>
+<msg timestamp="20230721 23:54:43.233" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'hideRfBrowser': '', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'viewport': {'width': 1280, 'height': 720}}</msg>
+<status status="PASS" starttime="20230721 23:54:43.200" endtime="20230721 23:54:43.233"/>
 </kw>
 <kw name="Configurar New Page" library="common_keywords">
 <kw name="Set Browser Timeout" library="Browser">
@@ -44,27 +43,27 @@
 <tag>Config</tag>
 <tag>Setter</tag>
 <doc>Sets the timeout used by most input and getter keywords.</doc>
-<msg timestamp="20230721 21:21:43.141" level="INFO">Set timeout to: 60000</msg>
-<msg timestamp="20230721 21:21:43.141" level="INFO">${old_timeout} = 10 seconds</msg>
-<status status="PASS" starttime="20230721 21:21:43.134" endtime="20230721 21:21:43.141"/>
+<msg timestamp="20230721 23:54:43.242" level="INFO">Set timeout to: 60000</msg>
+<msg timestamp="20230721 23:54:43.242" level="INFO">${old_timeout} = 10 seconds</msg>
+<status status="PASS" starttime="20230721 23:54:43.234" endtime="20230721 23:54:43.242"/>
 </kw>
 <kw name="New Page" library="Browser">
 <arg>${LOGIN URL}</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Open a new Page.</doc>
-<msg timestamp="20230721 21:22:30.372" level="INFO">Successfully initialized new page object and opened url: https://demoqa.com/</msg>
-<status status="PASS" starttime="20230721 21:21:43.142" endtime="20230721 21:22:30.372"/>
+<msg timestamp="20230721 23:54:56.247" level="INFO">Successfully initialized new page object and opened url: https://demoqa.com/</msg>
+<status status="PASS" starttime="20230721 23:54:43.243" endtime="20230721 23:54:56.247"/>
 </kw>
 <kw name="Set Browser Timeout" library="Browser">
 <arg>${old_timeout}</arg>
 <tag>Config</tag>
 <tag>Setter</tag>
 <doc>Sets the timeout used by most input and getter keywords.</doc>
-<msg timestamp="20230721 21:22:30.378" level="INFO">Set timeout to: 10000</msg>
-<status status="PASS" starttime="20230721 21:22:30.372" endtime="20230721 21:22:30.379"/>
+<msg timestamp="20230721 23:54:56.252" level="INFO">Set timeout to: 10000</msg>
+<status status="PASS" starttime="20230721 23:54:56.247" endtime="20230721 23:54:56.252"/>
 </kw>
-<status status="PASS" starttime="20230721 21:21:43.134" endtime="20230721 21:22:30.379"/>
+<status status="PASS" starttime="20230721 23:54:43.233" endtime="20230721 23:54:56.253"/>
 </kw>
 <kw name="Get Title" library="Browser">
 <arg>==</arg>
@@ -73,26 +72,171 @@
 <tag>Getter</tag>
 <tag>PageContent</tag>
 <doc>Returns the title of the current page.</doc>
-<msg timestamp="20230721 21:22:30.388" level="INFO">Title: 'DEMOQA'</msg>
-<status status="PASS" starttime="20230721 21:22:30.379" endtime="20230721 21:22:30.388"/>
+<msg timestamp="20230721 23:54:56.262" level="INFO">Title: 'DEMOQA'</msg>
+<status status="PASS" starttime="20230721 23:54:56.253" endtime="20230721 23:54:56.262"/>
 </kw>
-<status status="PASS" starttime="20230721 21:21:42.191" endtime="20230721 21:22:30.388"/>
+<status status="PASS" starttime="20230721 23:54:42.187" endtime="20230721 23:54:56.262"/>
 </kw>
-<kw name="Fechar o Browser" library="common_keywords">
+<test id="s1-s1-t1" name="Deve ser acessada a home do quando acessamos a url do site DEMOQA" line="11">
+<kw name="Validar se a página home está visível" library="home_keywords">
+<kw name="Validar se o banner da home está visível" library="home_page">
+<kw name="Get Text" library="Browser">
+<arg>${HOME_BANNER}</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<msg timestamp="20230721 23:54:56.328" level="INFO">Text: ''</msg>
+<status status="PASS" starttime="20230721 23:54:56.270" endtime="20230721 23:54:56.328"/>
+</kw>
+<status status="PASS" starttime="20230721 23:54:56.270" endtime="20230721 23:54:56.328"/>
+</kw>
+<kw name="Validar se os cards estão visiveis na home" library="home_keywords">
+<kw name="Validar se o card Elements está visível" library="home_page" sourcename="Validar se o card ${card} está visível">
+<kw name="Replace String" library="String">
+<var>${element}</var>
+<arg>${CARDS}</arg>
+<arg>$$</arg>
+<arg>${card}</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<msg timestamp="20230721 23:54:56.329" level="INFO">${element} = //div[contains(@class, "card-body") and normalize-space()="Elements"]</msg>
+<status status="PASS" starttime="20230721 23:54:56.329" endtime="20230721 23:54:56.329"/>
+</kw>
+<kw name="Get Text" library="Browser">
+<arg>${element}</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<msg timestamp="20230721 23:54:56.349" level="INFO">Text: 'Elements'</msg>
+<status status="PASS" starttime="20230721 23:54:56.329" endtime="20230721 23:54:56.349"/>
+</kw>
+<status status="PASS" starttime="20230721 23:54:56.328" endtime="20230721 23:54:56.350"/>
+</kw>
+<kw name="Validar se o card Forms está visível" library="home_page" sourcename="Validar se o card ${card} está visível">
+<kw name="Replace String" library="String">
+<var>${element}</var>
+<arg>${CARDS}</arg>
+<arg>$$</arg>
+<arg>${card}</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<msg timestamp="20230721 23:54:56.351" level="INFO">${element} = //div[contains(@class, "card-body") and normalize-space()="Forms"]</msg>
+<status status="PASS" starttime="20230721 23:54:56.350" endtime="20230721 23:54:56.351"/>
+</kw>
+<kw name="Get Text" library="Browser">
+<arg>${element}</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<msg timestamp="20230721 23:54:56.373" level="INFO">Text: 'Forms'</msg>
+<status status="PASS" starttime="20230721 23:54:56.351" endtime="20230721 23:54:56.373"/>
+</kw>
+<status status="PASS" starttime="20230721 23:54:56.350" endtime="20230721 23:54:56.373"/>
+</kw>
+<kw name="Validar se o card Alerts, Frame &amp; Windows está visível" library="home_page" sourcename="Validar se o card ${card} está visível">
+<kw name="Replace String" library="String">
+<var>${element}</var>
+<arg>${CARDS}</arg>
+<arg>$$</arg>
+<arg>${card}</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<msg timestamp="20230721 23:54:56.374" level="INFO">${element} = //div[contains(@class, "card-body") and normalize-space()="Alerts, Frame &amp; Windows"]</msg>
+<status status="PASS" starttime="20230721 23:54:56.373" endtime="20230721 23:54:56.374"/>
+</kw>
+<kw name="Get Text" library="Browser">
+<arg>${element}</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<msg timestamp="20230721 23:54:56.393" level="INFO">Text: 'Alerts, Frame &amp; Windows'</msg>
+<status status="PASS" starttime="20230721 23:54:56.374" endtime="20230721 23:54:56.393"/>
+</kw>
+<status status="PASS" starttime="20230721 23:54:56.373" endtime="20230721 23:54:56.395"/>
+</kw>
+<kw name="Validar se o card Widgets está visível" library="home_page" sourcename="Validar se o card ${card} está visível">
+<kw name="Replace String" library="String">
+<var>${element}</var>
+<arg>${CARDS}</arg>
+<arg>$$</arg>
+<arg>${card}</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<msg timestamp="20230721 23:54:56.396" level="INFO">${element} = //div[contains(@class, "card-body") and normalize-space()="Widgets"]</msg>
+<status status="PASS" starttime="20230721 23:54:56.395" endtime="20230721 23:54:56.396"/>
+</kw>
+<kw name="Get Text" library="Browser">
+<arg>${element}</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<msg timestamp="20230721 23:54:56.414" level="INFO">Text: 'Widgets'</msg>
+<status status="PASS" starttime="20230721 23:54:56.396" endtime="20230721 23:54:56.414"/>
+</kw>
+<status status="PASS" starttime="20230721 23:54:56.395" endtime="20230721 23:54:56.414"/>
+</kw>
+<kw name="Validar se o card Interactions está visível" library="home_page" sourcename="Validar se o card ${card} está visível">
+<kw name="Replace String" library="String">
+<var>${element}</var>
+<arg>${CARDS}</arg>
+<arg>$$</arg>
+<arg>${card}</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<msg timestamp="20230721 23:54:56.415" level="INFO">${element} = //div[contains(@class, "card-body") and normalize-space()="Interactions"]</msg>
+<status status="PASS" starttime="20230721 23:54:56.415" endtime="20230721 23:54:56.415"/>
+</kw>
+<kw name="Get Text" library="Browser">
+<arg>${element}</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<msg timestamp="20230721 23:54:56.432" level="INFO">Text: 'Interactions'</msg>
+<status status="PASS" starttime="20230721 23:54:56.415" endtime="20230721 23:54:56.432"/>
+</kw>
+<status status="PASS" starttime="20230721 23:54:56.414" endtime="20230721 23:54:56.432"/>
+</kw>
+<kw name="Validar se o card Book Store Application está visível" library="home_page" sourcename="Validar se o card ${card} está visível">
+<kw name="Replace String" library="String">
+<var>${element}</var>
+<arg>${CARDS}</arg>
+<arg>$$</arg>
+<arg>${card}</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<msg timestamp="20230721 23:54:56.433" level="INFO">${element} = //div[contains(@class, "card-body") and normalize-space()="Book Store Application"]</msg>
+<status status="PASS" starttime="20230721 23:54:56.433" endtime="20230721 23:54:56.433"/>
+</kw>
+<kw name="Get Text" library="Browser">
+<arg>${element}</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<msg timestamp="20230721 23:54:56.452" level="INFO">Text: 'Book Store Application'</msg>
+<status status="PASS" starttime="20230721 23:54:56.433" endtime="20230721 23:54:56.452"/>
+</kw>
+<status status="PASS" starttime="20230721 23:54:56.432" endtime="20230721 23:54:56.452"/>
+</kw>
+<status status="PASS" starttime="20230721 23:54:56.328" endtime="20230721 23:54:56.453"/>
+</kw>
+<status status="PASS" starttime="20230721 23:54:56.269" endtime="20230721 23:54:56.453"/>
+</kw>
+<status status="PASS" starttime="20230721 23:54:56.262" endtime="20230721 23:54:56.453"/>
+</test>
+<kw name="Fechar o Browser" library="common_keywords" type="TEARDOWN">
 <kw name="Close Browser" library="Browser">
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Closes the current browser.</doc>
-<msg timestamp="20230721 21:22:30.830" level="INFO">Closed browser</msg>
-<status status="PASS" starttime="20230721 21:22:30.389" endtime="20230721 21:22:30.830"/>
+<msg timestamp="20230721 23:54:56.917" level="INFO">Closed browser</msg>
+<status status="PASS" starttime="20230721 23:54:56.461" endtime="20230721 23:54:56.917"/>
 </kw>
-<status status="PASS" starttime="20230721 21:22:30.389" endtime="20230721 21:22:30.830"/>
+<status status="PASS" starttime="20230721 23:54:56.461" endtime="20230721 23:54:56.918"/>
 </kw>
-<status status="PASS" starttime="20230721 21:21:42.187" endtime="20230721 21:22:30.831"/>
-</test>
-<status status="PASS" starttime="20230721 21:21:40.883" endtime="20230721 21:22:30.839"/>
+<status status="PASS" starttime="20230721 23:54:40.854" endtime="20230721 23:54:56.918"/>
 </suite>
-<status status="PASS" starttime="20230721 21:21:40.853" endtime="20230721 21:22:30.845"/>
+<status status="PASS" starttime="20230721 23:54:40.828" endtime="20230721 23:54:56.926"/>
 </suite>
 <statistics>
 <total>
@@ -102,7 +246,7 @@
 </tag>
 <suite>
 <stat pass="1" fail="0" skip="0" id="s1" name="Tests">Tests</stat>
-<stat pass="1" fail="0" skip="0" id="s1-s1" name="Tests">Tests.Tests</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="Home">Tests.Home</stat>
 </suite>
 </statistics>
 <errors>

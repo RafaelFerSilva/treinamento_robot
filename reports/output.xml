@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1 (Python 3.10.11 on win32)" generated="20230721 21:21:40.851" rpa="false" schemaversion="4">
+<suite id="s1" name="Tests" source="C:\Documentos\Projetos\orbia\treinamento_robot\tests">
+<suite id="s1-s1" name="Tests" source="C:\Documentos\Projetos\orbia\treinamento_robot\tests\tests.robot">
+<test id="s1-s1-t1" name="Deve ser possível acessar o site DEMOQA" line="7">
+<kw name="Abrir o navegador no site da DEMOQA" library="common_keywords">
+<kw name="New Browser" library="Browser">
+<arg>browser=${BROWSER}</arg>
+<arg>headless=${HEADLESS}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<msg timestamp="20230721 21:21:42.192" level="INFO">{"browser": "chromium", "headless": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "C:\\Documentos\\Projetos\\orbia\\treinamento_robot\\reports\\browser\\traces\\0c4cff78-5fd1-47db-a6b9-12010ce44eae"}</msg>
+<msg timestamp="20230721 21:21:43.105" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"C:\\Documentos\\Projetos\\orbia\\treinamento_robot\\reports\\browser\\traces\\0c4cff78-5fd1-47db-a6b9-12010ce44eae"}</msg>
+<status status="PASS" starttime="20230721 21:21:42.191" endtime="20230721 21:21:43.106"/>
+</kw>
+<kw name="New Context" library="Browser">
+<arg>viewport=${VIEWPORT}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new BrowserContext with specified options.</doc>
+<msg timestamp="20230721 21:21:43.108" level="INFO">{
+  "acceptDownloads": true,
+  "bypassCSP": false,
+  "forcedColors": "none",
+  "hideRfBrowser": "",
+  "ignoreHTTPSErrors": false,
+  "javaScriptEnabled": true,
+  "offline": false,
+  "reducedMotion": "no-preference",
+  "viewport": {
+    "height": 720,
+    "width": 1280
+  }
+}</msg>
+<msg timestamp="20230721 21:21:43.133" level="INFO">Successfully created context. </msg>
+<msg timestamp="20230721 21:21:43.133" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'hideRfBrowser': '', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'viewport': {'height': 720, 'width': 1280}}</msg>
+<status status="PASS" starttime="20230721 21:21:43.106" endtime="20230721 21:21:43.133"/>
+</kw>
+<kw name="Configurar New Page" library="common_keywords">
+<kw name="Set Browser Timeout" library="Browser">
+<var>${old_timeout}</var>
+<arg>1m</arg>
+<tag>Config</tag>
+<tag>Setter</tag>
+<doc>Sets the timeout used by most input and getter keywords.</doc>
+<msg timestamp="20230721 21:21:43.141" level="INFO">Set timeout to: 60000</msg>
+<msg timestamp="20230721 21:21:43.141" level="INFO">${old_timeout} = 10 seconds</msg>
+<status status="PASS" starttime="20230721 21:21:43.134" endtime="20230721 21:21:43.141"/>
+</kw>
+<kw name="New Page" library="Browser">
+<arg>${LOGIN URL}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<msg timestamp="20230721 21:22:30.372" level="INFO">Successfully initialized new page object and opened url: https://demoqa.com/</msg>
+<status status="PASS" starttime="20230721 21:21:43.142" endtime="20230721 21:22:30.372"/>
+</kw>
+<kw name="Set Browser Timeout" library="Browser">
+<arg>${old_timeout}</arg>
+<tag>Config</tag>
+<tag>Setter</tag>
+<doc>Sets the timeout used by most input and getter keywords.</doc>
+<msg timestamp="20230721 21:22:30.378" level="INFO">Set timeout to: 10000</msg>
+<status status="PASS" starttime="20230721 21:22:30.372" endtime="20230721 21:22:30.379"/>
+</kw>
+<status status="PASS" starttime="20230721 21:21:43.134" endtime="20230721 21:22:30.379"/>
+</kw>
+<kw name="Get Title" library="Browser">
+<arg>==</arg>
+<arg>DEMOQA</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns the title of the current page.</doc>
+<msg timestamp="20230721 21:22:30.388" level="INFO">Title: 'DEMOQA'</msg>
+<status status="PASS" starttime="20230721 21:22:30.379" endtime="20230721 21:22:30.388"/>
+</kw>
+<status status="PASS" starttime="20230721 21:21:42.191" endtime="20230721 21:22:30.388"/>
+</kw>
+<kw name="Fechar o Browser" library="common_keywords">
+<kw name="Close Browser" library="Browser">
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Closes the current browser.</doc>
+<msg timestamp="20230721 21:22:30.830" level="INFO">Closed browser</msg>
+<status status="PASS" starttime="20230721 21:22:30.389" endtime="20230721 21:22:30.830"/>
+</kw>
+<status status="PASS" starttime="20230721 21:22:30.389" endtime="20230721 21:22:30.830"/>
+</kw>
+<status status="PASS" starttime="20230721 21:21:42.187" endtime="20230721 21:22:30.831"/>
+</test>
+<status status="PASS" starttime="20230721 21:21:40.883" endtime="20230721 21:22:30.839"/>
+</suite>
+<status status="PASS" starttime="20230721 21:21:40.853" endtime="20230721 21:22:30.845"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Tests">Tests</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="Tests">Tests.Tests</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

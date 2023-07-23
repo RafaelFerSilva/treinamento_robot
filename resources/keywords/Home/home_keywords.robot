@@ -1,6 +1,6 @@
 *** Settings ***
 
-Resource        ${EXECDIR}/resources/pages/home_page.robot
+Resource        ${EXECDIR}/resources/pages/Home/home_page.robot
 
 *** Keywords ***
 

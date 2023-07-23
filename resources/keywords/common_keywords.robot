@@ -1,6 +1,7 @@
 *** Settings ***
 
 Library    Browser
+Library     String
 
 *** Variables ***
 ${LOGIN URL}              https://demoqa.com/
@@ -24,3 +25,13 @@ Abrir o navegador no site da DEMOQA
 
 Fechar o Browser 
     Close Browser
+
+String Replace
+    [Documentation]  Replaces the ocurrences of '$$' for the respective strings.
+    [Arguments]  ${template_string}  @{replacement_strings}
+
+    FOR    ${string}    IN    @{replacement_strings}
+        ${template_string} =   Replace String    ${template_string}   $$   ${string}    count=1
+    END
+
+    [Return]    ${template_string}

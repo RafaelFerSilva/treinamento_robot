@@ -11,3 +11,41 @@ Suite Teardown  Fechar o Browser
 Deve ser acessada a home do quando acessamos a url do site DEMOQA
     
     Validar se a página home está visível
+
+    [Teardown]      Retornar a tela home clicando no link TOOLSQA
+
+Deve ser redirecionado para a tela do card Elements quando clicar no card Elements
+
+    Acessar a tela do card Elements
+
+    [Teardown]      Retornar a tela home clicando no link TOOLSQA
+
+Deve ser redirecionado para a tela do card Forms quando clicar no card Forms
+
+    Acessar a tela do card Forms
+
+    [Teardown]      Retornar a tela home clicando no link TOOLSQA
+
+Deve ser redirecionado para a tela do card Alerts, Frame & Windows quando clicar no card Alerts, Frame & Windows
+
+    Acessar a tela do card Alerts, Frame & Windows
+
+    [Teardown]      Retornar a tela home clicando no link TOOLSQA
+
+Deve ser redirecionado para a tela do card Widgets quando clicar no card Widgets
+
+    Acessar a tela do card Widgets
+
+    [Teardown]      Retornar a tela home clicando no link TOOLSQA
+
+Deve ser redirecionado para a tela do card Interactions quando clicar no card Interactions
+
+    Acessar a tela do card Interactions
+
+    [Teardown]      Retornar a tela home clicando no link TOOLSQA
+
+Deve ser redirecionado para a tela do card Book Store Application quando clicar no card Book Store Application
+
+    Acessar a tela do card Book Store Application e validar que o título Book Store
+
+    [Teardown]      Retornar a tela home clicando no link TOOLSQA

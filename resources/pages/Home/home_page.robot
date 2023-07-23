@@ -3,7 +3,7 @@
 Library     Browser
 Library     String
 
-Resource         ${EXECDIR}/resources/locators/home_locators.robot
+Resource         ${EXECDIR}/resources/locators/Home/home_locators.robot
 
 *** Keywords ***
 

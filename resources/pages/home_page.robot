@@ -15,3 +15,16 @@ Validar se o card ${card} está visível
 
     ${element}      Replace String    ${CARDS}	  $$    ${card}
     Get Text        ${element}
+
+Clicar no card ${card}
+
+     ${element}      Replace String    ${CARDS}	  $$    ${card}
+     Click     ${element}
+
+Verificar o heade da página do card ${card}
+
+     Get Text        ${TELA}       ==    ${card}
+
+Clicar no link TOOLSQA no header da tela dos cards
+     
+     Click     ${LINK_TOOLQA_HEADER}

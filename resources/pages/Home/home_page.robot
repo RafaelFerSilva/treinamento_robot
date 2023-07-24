@@ -21,7 +21,7 @@ Clicar no card ${card}
      ${element}      Replace String    ${CARDS}	  $$    ${card}
      Click     ${element}
 
-Verificar o heade da página do card ${card}
+Verificar o header da página do card ${card}
 
      Get Text        ${TELA}       ==    ${card}
 

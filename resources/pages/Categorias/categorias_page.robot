@@ -14,3 +14,8 @@ Validar se a sub-categoria ${sub_categoria} está visível na categoria ${catego
 
     ${element}      String Replace    ${ITEM_SUB_CATEGORIA}     ${categoria}	  ${sub_categoria}
     Get text    ${element}
+
+Clicar na sub-categoria ${sub_categoria} da categoria ${categoria}
+
+    ${element}      String Replace    ${ITEM_SUB_CATEGORIA}     ${categoria}	  ${sub_categoria}
+    Click    ${element}

@@ -2,6 +2,7 @@
 
 Library    Browser
 Library     String
+Library     FakerLibrary
 
 *** Variables ***
 ${LOGIN URL}              https://demoqa.com/
@@ -35,3 +36,18 @@ String Replace
     END
 
     [Return]    ${template_string}
+
+Criar dados de um usuário fake
+
+    ${nome}=        FakerLibrary.User Name
+    ${email}=       FakerLibrary.Email
+    ${endereco_atual}=      FakerLibrary.Address
+    ${endereco_permanente}=     FakerLibrary.Address
+
+    
+    &{usuario}=         Create Dictionary       nome=${nome}
+    ...                                         email=${email}
+    ...                                         endereco_atual=${endereco_atual}
+    ...                                         endereco_permanente=${endereco_permanente}
+
+    [Return]    ${usuario}

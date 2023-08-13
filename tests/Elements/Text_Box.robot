@@ -1,8 +1,6 @@
 *** Settings ***
 
-Resource        ${EXECDIR}/resources/keywords/common_keywords.robot
-Resource        ${EXECDIR}/resources/keywords/Home/home_keywords.robot
-Resource        ${EXECDIR}/resources/keywords/Categorias/categorias_keywords.robot
+Resource        ${EXECDIR}/resources/utils/common_imports.robot
 Resource        ${EXECDIR}/resources/keywords/Text_Box/text_box_keywords.robot
 
 Suite Setup     Run keywords    Abrir o navegador no site da DEMOQA     AND     Acessar a tela do card Elements     AND     Validar se a categoria Elements e suas sub-categorias estão visíveis

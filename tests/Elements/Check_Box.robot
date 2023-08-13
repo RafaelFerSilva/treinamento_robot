@@ -29,7 +29,6 @@ Deve ser exibido o nome de todos os checkbox ao selecionar o checkbox home
     [Teardown]      Desmarcar o check box do item Home
 
 Deve ser exibido o nome dos check boxes relacionados ao check box Downloads na sessão resultado quando selecionarmos o Downloads
-    [Tags]      temp
     [Setup]     Selecionar a sub-categoria Check Box da categoria Elements e validar se o título da página é Check Box
 
     Clicar para expandir o check box group Home

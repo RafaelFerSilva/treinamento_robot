@@ -66,7 +66,7 @@ Clicar no botão para abrir o formulário de registro de itens na tabela
 Verificar se o modal de registro está visível
     [Arguments]     ${status}=visible
 
-    Get Element States    ${MODAL_HEADER}   *=      visible
+    Get Element States    ${MODAL_HEADER}   *=      ${status}
 
 Clicar para fechar o modal de registro da tabela
 

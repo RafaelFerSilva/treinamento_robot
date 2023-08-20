@@ -48,7 +48,6 @@ Deve ser possível remover todos os itens da tabela
    Excluir todos os itens da tabela
 
 Deve ser possível registrar um item na tabela
-    [Tags]  temp
 
     ${user}=        Criar dados de um usuário fake
 

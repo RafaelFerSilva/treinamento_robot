@@ -40,14 +40,22 @@ String Replace
 Criar dados de um usuário fake
 
     ${nome}=        FakerLibrary.User Name
+    ${sobrenome}=        FakerLibrary.Last Name
     ${email}=       FakerLibrary.Email
     ${endereco_atual}=      FakerLibrary.Address
     ${endereco_permanente}=     FakerLibrary.Address
+    ${idade}=     FakerLibrary.Random Number  digits=2
+    ${salario}=     FakerLibrary.Random Number     digits=4
+    ${departamento}=     FakerLibrary.Word
 
     
     &{usuario}=         Create Dictionary       nome=${nome}
+    ...                                         sobrenome=${sobrenome}
     ...                                         email=${email}
     ...                                         endereco_atual=${endereco_atual}
     ...                                         endereco_permanente=${endereco_permanente}
+    ...                                         idade=${idade}
+    ...                                         salario=${salario}
+    ...                                         departamento=${departamento}
 
     [Return]    ${usuario}

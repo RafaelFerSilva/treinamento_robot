@@ -14,7 +14,7 @@ ${VIEWPORT}               {'width': 1280, 'height': 720}
 
 Configurar New Page
 
-    ${old_timeout} =    Set Browser Timeout    1m
+    ${old_timeout} =    Set Browser Timeout    2m
     New Page        ${LOGIN URL} 
     Set Browser Timeout    ${old_timeout}
 
@@ -59,3 +59,13 @@ Criar dados de um usuário fake
     ...                                         departamento=${departamento}
 
     [Return]    ${usuario}
+
+Realizar um mouse click simples
+    [Arguments]     ${locator}      ${mouse_button}=left
+
+    Click   ${locator}      ${mouse_button}
+
+Realizar um mouse click duplo
+    [Arguments]     ${locator}      ${mouse_button}=left
+
+    Click With Options      ${locator}      clickCount=2

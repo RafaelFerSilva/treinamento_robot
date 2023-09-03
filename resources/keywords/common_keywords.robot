@@ -69,3 +69,8 @@ Realizar um mouse click duplo
     [Arguments]     ${locator}      ${mouse_button}=left
 
     Click With Options      ${locator}      clickCount=2
+
+Retornar para uma tab pelo seu ID
+    [Arguments]     ${id}
+
+    Switch Page     ${id}

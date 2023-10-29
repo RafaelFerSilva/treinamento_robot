@@ -19,8 +19,8 @@ Configurar New Page
     Set Browser Timeout    ${old_timeout}
 
 Abrir o navegador no site da DEMOQA
-    New Browser     browser=${BROWSER}      headless=${HEADLESS}
-    New Context     viewport=${VIEWPORT}
+    New Browser     browser=${BROWSER}      headless=${HEADLESS}      downloadsPath=${EXECDIR}\\assets\\download
+    New Context     viewport=${VIEWPORT}    acceptDownloads=True
     Configurar New Page
     Get Title    ==       DEMOQA
 
@@ -74,3 +74,11 @@ Retornar para uma tab pelo seu ID
     [Arguments]     ${id}
 
     Switch Page     ${id}
+
+Retornar o href de um elemento
+  [Arguments]   ${elemento_com_href}
+
+  ${elem}=          Get Element   ${elemento_com_href}
+  ${href}=          Get Property  ${elem}  href
+
+  [Return]    ${href}

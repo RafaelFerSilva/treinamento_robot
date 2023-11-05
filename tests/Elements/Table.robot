@@ -21,19 +21,19 @@ Deve ser possível acessar a tela de web tables
     Validar os elementos da página Table
     Validar o conteúdo default da tabela    
 
-Deve ser possível pesqusiar um item pela coluna Email
+Deve ser possível pesquisar um item pela coluna Email
 
     Pesquisar um item na tabela e validar se está visível   alden@example.com
     Verificar se o conteúdo de uma celula não está na tabela    cierra@example.com  
     Verificar se o conteúdo de uma celula não está na tabela    kierra@example.com
 
-Deve ser possível pesqusiar um item pela coluna Age
+Deve ser possível pesquisar um item pela coluna Age
 
     Pesquisar um item na tabela e validar se está visível   39
     Verificar se o conteúdo de uma celula não está na tabela    45
     Verificar se o conteúdo de uma celula não está na tabela    29
 
-Deve ser possível pesqusiar um item pela coluna Salary
+Deve ser possível pesquisar um item pela coluna Salary
 
     Pesquisar um item na tabela e validar se está visível   2000
     Verificar o conteúdo de uma celula da tabela    12000

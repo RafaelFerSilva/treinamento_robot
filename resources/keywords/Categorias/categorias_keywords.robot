@@ -1,6 +1,6 @@
 *** Settings ***
 
-Resource        ${EXECDIR}/resources/Pages/Categorias/categorias_page.robot
+Resource  ${EXECDIR}/resources/pages/Categorias/categorias_page.robot
 
 *** Keywords ***
 

@@ -1,0 +1,62 @@
+name: Integração Contínua
+
+on:
+  pull_request:
+
+jobs:
+  e2e_test:
+    permissions: write-all
+    name: Testes E2E
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Realizar checkout no repositório dos tests
+        uses: actions/checkout@v3
+
+      - name: Install Python 3.10
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: Install Node.js 19.1
+        uses: actions/setup-node@v3
+        with:
+          node-version: '19.1'
+      
+      - name: Create reports folder
+        run: |
+          mkdir reports
+      
+      - name: Install Requirements
+        run: |
+          ls -l
+          python -m pip install --upgrade pip
+          pip install -U -r requirements.txt
+          sudo npm install @playwright/test
+          sudo npx playwright install-deps
+          rfbrowser init
+
+      - name: Executar os tests
+        run: robot -d ./reports  -v HEADLESS:true  ./tests
+
+      - name: Upload tests results
+        if: always()
+        uses: actions/upload-artifact@v3
+        with:
+          name: results
+          path: ./reports
+          if-no-files-found: ignore
+
+      - name: Download Tests Results
+        if: always()
+        uses: actions/download-artifact@v1
+        with:
+          name: results
+
+      - name: Send Report
+        if: always()
+        uses: joonvena/robotframework-reporter-action@v2.3
+        with:
+          report_path: results
+          gh_access_token: ${{ secrets.GITHUB_TOKEN }}
+          show_passed_tests: false

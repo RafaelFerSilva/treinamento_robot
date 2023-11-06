@@ -17,11 +17,11 @@ Test Tags  elements    upload_download
 *** Test Cases ***
 Deve ser possível realizar o upload de um arquivo
 
-    Realizar o upload de um arquivo pelo Selector        ${EXECDIR}\\assets\   robot logo.png
+    Realizar o upload de um arquivo pelo Selector        ${EXECDIR}//assets//   robot_logo.png
 
 Deve ser possível realizar o upload de um arquivo - Promise
 
-  Realizar o upload de um arquivo   ${EXECDIR}\\assets\   robot logo.png
+  Realizar o upload de um arquivo   ${EXECDIR}//assets//   robot_logo.png
 
 Realizar download de um arquivo
   

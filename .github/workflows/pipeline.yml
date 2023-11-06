@@ -51,11 +51,3 @@ jobs:
         uses: actions/download-artifact@v1
         with:
           name: results
-
-      - name: Send Report
-        if: always()
-        uses: joonvena/robotframework-reporter-action@v2.3
-        with:
-          report_path: results
-          gh_access_token: ${{ secrets.GITHUB_TOKEN }}
-          show_passed_tests: false

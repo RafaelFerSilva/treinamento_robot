@@ -1,7 +1,7 @@
 <h1 align="center">Robot Framework e Browser Library</h1>
 
 <h1 align="center">
-  <img alt="logo" title="#NextLevelWeek" src="./assets/robot logo.png" />
+  <img alt="logo" title="#NextLevelWeek" src="./assets/robot_logo.png" />
 </h1>
 
 <h2 align="center">

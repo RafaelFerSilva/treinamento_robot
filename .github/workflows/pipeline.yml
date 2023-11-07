@@ -1,0 +1,53 @@
+name: Integração Contínua
+
+on:
+  pull_request:
+
+jobs:
+  e2e_test:
+    permissions: write-all
+    name: Testes E2E
+    runs-on: windows-latest
+
+    steps:
+      - name: Realizar checkout no repositório dos tests
+        uses: actions/checkout@v3
+
+      - name: Install Python 3.10
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: Install Node.js 19.1
+        uses: actions/setup-node@v3
+        with:
+          node-version: '19.1'
+      
+      - name: Create reports folder
+        run: |
+          mkdir reports
+      
+      - name: Install Requirements
+        run: |
+          python -m pip install --upgrade pip
+          pip install -U -r requirements.txt
+          npm install @playwright/test
+          npx playwright install-deps
+          rfbrowser init
+
+      - name: Executar os tests
+        run: robot -d ./reports  -v HEADLESS:true  ./tests
+
+      - name: Upload tests results
+        if: always()
+        uses: actions/upload-artifact@v3
+        with:
+          name: results
+          path: ./reports
+          if-no-files-found: ignore
+
+      - name: Download Tests Results
+        if: always()
+        uses: actions/download-artifact@v1
+        with:
+          name: results

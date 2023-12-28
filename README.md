@@ -19,15 +19,11 @@
 </h3>
 
 <h3 align="center">
-    Todo projeto está sendo apresentado nem nosso Newsletter no linkedin
+    Todo projeto está sendo apresentado em nosso Newsletter no linkedin
 </h3>
 <h3 align="center">
     <a href="https://www.linkedin.com/newsletters/testes-e-robot-framework-7089354508467642369/">Testes e Robot Framework</a>
 </h3>
-
-<h4 align="center"> 
-	🚧  Treinamento Robot 🚀 Em construção...  🚧
-</h4>
 
 <p align="center">🤖 Automação de testes com Robot Framework</p>
 

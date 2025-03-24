@@ -10,15 +10,15 @@ jobs:
 
     steps:
       - name: Realizar checkout no repositório dos tests
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Install Python 3.10
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         with:
           python-version: '3.10'
 
       - name: Install Node.js 19.1
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
           node-version: '19.1'
       
@@ -39,7 +39,7 @@ jobs:
 
       - name: Upload tests results
         if: always()
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: results
           path: ./reports
@@ -47,6 +47,6 @@ jobs:
 
       - name: Download Tests Results
         if: always()
-        uses: actions/download-artifact@v1
+        uses: actions/download-artifact@v4
         with:
           name: results

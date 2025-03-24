@@ -1,7 +1,6 @@
 name: Integração Contínua
 
-on:
-  pull_request:
+on: [pull_request, push]
 
 jobs:
   e2e_test:

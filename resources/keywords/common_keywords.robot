@@ -63,7 +63,7 @@ String Replace
         ${template_string} =   Replace String    ${template_string}   $$   ${string}    count=1
     END
 
-    [Return]    ${template_string}
+    RETURN    ${template_string}
 
 Criar dados de um usuário fake
 
@@ -105,7 +105,7 @@ Criar dados de um usuário fake
     ...                                         subjects=${user_subjects}
     ...                                         user_picture=robot_logo.png
 
-    [Return]    ${usuario}
+    RETURN    ${usuario}
 
 Realizar um mouse click simples
     [Arguments]     ${locator}      ${mouse_button}=left
@@ -128,7 +128,7 @@ Retornar o href de um elemento
   ${elem}=          Get Element   ${elemento_com_href}
   ${href}=          Get Property  ${elem}  href
 
-  [Return]    ${href}
+  RETURN    ${href}
 
 Inserir valor em um campo Input
     [Arguments]    ${locator}    ${valor}
@@ -148,7 +148,7 @@ Formatar data para dia abreviacao mes e ano
        ${data_input}=       Catenate    0${data.day}    ${MESES_ABREV}[${mes}]    ${data.year}
     END
 
-    [Return]    ${data_input}
+    RETURN    ${data_input}
 
 Formatar data para dia mes, ano
     [Arguments]    ${data}
@@ -162,4 +162,4 @@ Formatar data para dia mes, ano
        ${data_input}=       Catenate    0${data.day}    ${MESES}[${mes}],${data.year}
     END
 
-    [Return]    ${data_input}
+    RETURN    ${data_input}

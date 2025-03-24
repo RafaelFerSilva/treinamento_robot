@@ -22,7 +22,7 @@ Upload de um arquivo
   ${file}=    Catenate    SEPARATOR=\\     ${file_path}       ${file_name}
   ${promise}=    Promise To Upload File    ${file}
 
-  [Return]    ${promise}
+  RETURN    ${promise}
 
 Validar se path do arquivo após o upload
   [Arguments]     ${file_name}
@@ -36,4 +36,4 @@ Aguardar o download de um arquivo
   ${file}=    Catenate     SEPARATOR=\\    ${PASTA_DOWNLOAD_ARQUIVOS}      ${file_name}
   ${dl_promise}          Promise To Wait For Download    ${file}
 
-  [Return]    ${dl_promise}
+  RETURN    ${dl_promise}

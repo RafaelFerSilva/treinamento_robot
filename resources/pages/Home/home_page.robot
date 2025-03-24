@@ -23,7 +23,7 @@ Clicar no card ${card}
 
 Verificar o header da página do card ${card}
 
-     Get Text        ${TELA}       ==    ${card}
+     Get Text        //h1       ==    ${card}
 
 Clicar no link TOOLSQA no header da tela dos cards
      

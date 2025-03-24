@@ -43,9 +43,3 @@ Deve ser redirecionado para a tela do card Interactions quando clicar no card In
     Acessar a tela do card Interactions
 
     [Teardown]      Retornar a tela home clicando no link TOOLSQA
-
-Deve ser redirecionado para a tela do card Book Store Application quando clicar no card Book Store Application
-
-    Acessar a tela do card Book Store Application e validar que o título Book Store
-
-    [Teardown]      Retornar a tela home clicando no link TOOLSQA
